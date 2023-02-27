@@ -9,25 +9,43 @@
     <div class="title">⛩ Crypto coins touchbar ⛩</div>
     <div class="input-wrapper">
       <div class="label">Comma-separated coins tickers:</div>
-      <input type="text" id="tickers" name="tickers" value="ETH, DOT, BNB">
+      <input type="text" id="tickers" name="tickers" value="ETH, DOT, BNB" />
     </div>
     <div class="input-wrapper">
       <div class="label">Refresh prices interval [ minutes ]:</div>
-      <input type="number" id="interval" name="interval" value="5">
+      <input type="number" id="interval" name="interval" value="5" />
     </div>
     <div class="submit-wrapper">
       <button id="run-button" value="RUN">RUN</button>
     </div>
 
     <div class="support">
-      <div class="label">Support my work:</div>
-      <div class="support-wrapper">
-        <div class="label">BTC: bc1q9pkx9c225d35hex9g7u9puxhjmts82cdm595gr</div>
+      <span class="label">Donate</span>
+      <div>
+        <span class="label">
+          BTC:
+          <span class="address"
+            >bc1q9pkx9c225d35hex9g7u9puxhjmts82cdm595gr</span
+          >
+        </span>
       </div>
-      <div class="support-wrapper">
-        <div class="label">USDT [ TRC20 ]: TErA6Nt6Mb5yn66qFstukAVS5hECUk3ZEU</div>
+      <div>
+        <span class="label">
+          USDT [TRC20]:
+          <span class="address">TErA6Nt6Mb5yn66qFstukAVS5hECUk3ZEU</span>
+        </span>
       </div>
     </div>
   </body>
   <script src="renderer.js"></script>
+  <script>
+    document.querySelectorAll(".address").forEach((el) => {
+      el.onclick = (event) => {
+        event.preventDefault();
+        var copyText = event.target.textContent;
+        navigator.clipboard.writeText(copyText);
+        alert("address copied");
+      };
+    });
+  </script>
 </html>

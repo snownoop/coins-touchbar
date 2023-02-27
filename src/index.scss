@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'kamikaze3d';
-  src: url('kamikaze.3d-gradient-regular.ttf');
+  font-family: "kamikaze3d";
+  src: url("../assets/kamikaze.3d-gradient-regular.ttf");
 }
 
 @font-face {
-  font-family: 'kamikaze';
-  src: url('kamikaze.regular.ttf');
+  font-family: "kamikaze";
+  src: url("../assets/kamikaze.regular.ttf");
 }
 
 body {
@@ -13,7 +13,7 @@ body {
   margin: auto;
   max-width: 38rem;
   padding: 2rem;
-  background-image: url("background.jpeg");
+  background-image: url("../assets/background.jpeg");
   // background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
@@ -50,6 +50,9 @@ body {
     color: white;
     padding: 3px;
     width: auto;
+    .address {
+      cursor: pointer;
+    }
   }
   .submit-wrapper {
     width: 100%;
@@ -65,10 +68,5 @@ body {
   }
   .support {
     margin-top: 20px;
-    .support-wrapper {
-      margin-top: 5px;
-      display: flex;
-      flex-direction: column;
-    }    
   }
 }
