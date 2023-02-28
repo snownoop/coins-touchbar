@@ -1,7 +1,7 @@
 # coins-touchbar
 
 To use
-1. npm install
+1. ```npm install```
 2. provide Coinmarketcap api key in code
 3. npm run make
 4. npm run publish
